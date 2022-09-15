@@ -7,28 +7,19 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<head>
 		<?$APPLICATION->ShowHead();?>
 		<title><?$APPLICATION->ShowTitle();?></title>
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 	
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/safari-pinned-tab.svg" color="#feb301">
+        <link rel="shortcut icon" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
-    <?$APPLICATION->IncludeComponent(
-        "bitrix:menu",
-        "horizontal_multilevel",
-        Array(
-            "ALLOW_MULTI_SELECT" => "N",
-            "CHILD_MENU_TYPE" => "main_submenu",
-            "COMPONENT_TEMPLATE" => "horizontal_multilevel",
-            "COMPOSITE_FRAME_MODE" => "A",
-            "COMPOSITE_FRAME_TYPE" => "AUTO",
-            "DELAY" => "N",
-            "MAX_LEVEL" => "2",
-            "MENU_CACHE_GET_VARS" => array(),
-            "MENU_CACHE_TIME" => "3600",
-            "MENU_CACHE_TYPE" => "A",
-            "MENU_CACHE_USE_GROUPS" => "Y",
-            "ROOT_MENU_TYPE" => "main_menu",
-            "USE_EXT" => "Y"
-        )
-    );?>
 		<div id="panel">
 			<?$APPLICATION->ShowPanel();?>
 		</div>
