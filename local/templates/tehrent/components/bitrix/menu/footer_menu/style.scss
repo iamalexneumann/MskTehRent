@@ -1,0 +1,44 @@
+.footer-menu {
+  padding: 0;
+  list-style: none;
+
+  &__col {
+
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--my-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+
+  &__submenu {
+    margin: 0 0 50px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__col:last-of-type &__submenu:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__link {
+    font-size: 0.85rem;
+  }
+
+  &__link_active {
+    font-weight: 700;
+  }
+}

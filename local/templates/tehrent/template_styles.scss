@@ -1,9 +1,15 @@
 :root {
   --my-black: #1c1c24;
-  --my-text-muted: #636b72;
+  --my-white: #ffffff;
+  --my-text-muted: #949494;
   --my-link-color: #feb301;
-  --my-link-color-hover: #eaa501;
+  --my-link-color-hover: #fec94d;
   --my-transition: all .25s ease-in-out;
+  --my-warning-bg: #feb301;
+  --my-warning-bg-hover: #fec94d;
+  --my-warning-bg-active: #e4b445;
+  --my-warning-bg-text: #1c1c24;
+  --hex-side: 25px;
 }
 
 body {
@@ -33,6 +39,33 @@ a {
 
 a:hover {
   color: var(--my-link-color-hover);
+}
+
+.btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 15px 30px;
+  font-weight: 700;
+}
+
+.btn-sm {
+  padding: 7px 14px;
+}
+
+.btn-warning {
+  --bs-btn-color: var(--my-warning-bg-text);
+  --bs-btn-bg: var(--my-warning-bg);
+  --bs-btn-border-color: var(--my-warning-bg);
+  --bs-btn-hover-color: var(--my-warning-bg-text);
+  --bs-btn-hover-bg: var(--my-warning-bg-hover);
+  --bs-btn-hover-border-color: var(--my-warning-bg-hover);
+  --bs-btn-active-color: var(--my-warning-bg-text);
+  --bs-btn-active-bg: var(--my-warning-bg-active);
+  --bs-btn-active-border-color: var(--my-warning-bg-active);
+  --bs-btn-disabled-color: var(--my-warning-bg-text);
+  --bs-btn-disabled-bg: var(--my-warning-bg);
+  --bs-btn-disabled-border-color: var(--my-warning-bg);
 }
 
 h1,
@@ -87,12 +120,14 @@ h5,
   &__img {
     width: 75px;
     height: 75px;
+    margin-right: 10px;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
   }
 
   &__name {
@@ -105,5 +140,162 @@ h5,
   &__description {
     color: var(--my-text-muted);
     font-size: 0.85rem;
+  }
+}
+
+.messengers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side);
+    background: var(--my-warning-bg);
+    position: relative;
+    color: var(--my-warning-bg-text);
+    margin: calc(var(--hex-side) /2) 0;
+  }
+
+  &__link::before,
+  &__link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--my-warning-bg);
+    top: 0;
+    left: 0;
+    transition: var(--my-transition);
+  }
+
+  &__link::before {
+    transform: rotate(60deg);
+  }
+
+  &__link::after {
+    transform: rotate(-60deg);
+  }
+
+  &__link:hover,
+  &__link:hover::before,
+  &__link:hover::after {
+    background: var(--my-warning-bg-hover);
+    color: var(--my-warning-bg-text);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+.main-footer {
+  &__content {
+    background: #1c1e22;
+    color: var(--my-white);
+    padding: 50px 0;
+
+
+  }
+
+  &__copyright {
+    background: #101010;
+    color: var(--my-white);
+    padding: 15px 0;
+    font-size: 0.85rem;
+  }
+}
+
+.footer-contacts {
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__logo .logo__name {
+    color: var(--my-white);
+  }
+
+  &__phone-link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  &__callback-btn {
+    margin-top: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    margin-right: 7px;
+    font-size: 1rem;
+  }
+
+  &__messengers {
+    margin: 30px 0;
+  }
+
+  &__item_email {
+    font-weight: 700;
+  }
+
+  @media (max-width: 991.98px) {
+      margin-bottom: 50px;
+      text-align: center;
+
+      &__item,
+      &__messengers,
+      &__logo {
+        justify-content: center;
+      }
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+
+  &__links {
+    margin-top: 10px;
+  }
+
+  &__link {
+    margin: 0 10px;
+  }
+
+  &__link:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: 767.98px) {
+    &__links {
+      display: flex;
+      flex-direction: column;
+    }
+    &__link:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
   }
 }

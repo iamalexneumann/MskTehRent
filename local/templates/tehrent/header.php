@@ -57,7 +57,7 @@ Loc::loadLanguageFile(__FILE__);
                    title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>"
                     <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
                     <img src="<?= $siteparam_main_logo; ?>"
-                         class="logo__img me-2"
+                         class="logo__img"
                          width="75"
                          height="75"
                          alt="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>">

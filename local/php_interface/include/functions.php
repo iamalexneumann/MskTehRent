@@ -67,3 +67,77 @@ function custom_ucfirst (string $str, string $e = 'utf-8'):string
     $fc = mb_strtoupper(mb_substr($str, 0, 1, $e), $e);
     return $fc . mb_substr($str, 1, mb_strlen($str, $e), $e);
 }
+
+/**
+ * Функция получает список пользовательских полей (UF_*) секции из URL страницы.
+ * Внутри происходит получение SECTION_CODE из URL страницы.
+ * @param int $iblock_id Идентификатор инфоблока
+ * @param string $cur_page Адрес страницы
+ * @return array Массив с общей информацией о секции и списком полей UF_*
+ */
+function get_section_ufs_from_url (int $iblock_id, string $cur_page):array
+{
+    $ar_cur_page = explode('/', $cur_page);
+    $section_code = array_slice($ar_cur_page, -2, 1)[0];
+    $ob_section = CIBlockSection::GetList(
+        [],
+        [
+            'IBLOCK_ID' => $iblock_id,
+            '=CODE' => $section_code
+        ],
+        false,
+        ['UF_*'],
+    );
+    if ($arr_ufs = $ob_section->Fetch()) {
+        return $arr_ufs;
+    }
+    return [];
+}
+
+/**
+ * Функция возвращает массив с ID элемента через фильтрацию по его ELEMENT_CODE.
+ * @param string $element_code ELEMENT_CODE элемента инфоблока
+ * @return array Массив с ID элемента
+ */
+function get_element_id_from_element_code (string $element_code):array
+{
+    $elements_list = CIBlockElement::GetList(
+        [],
+        [
+            '=CODE' => $element_code,
+            'ACTIVE' => 'Y',
+        ],
+        false,
+        false,
+        [
+            'ID',
+            'NAME'
+        ],
+    );
+    $elements = [];
+    while ($arr_elements = $elements_list->Fetch()) {
+        $elements = $arr_elements;
+    }
+    return $elements;
+}
+
+/**
+ * Функция проверяет наличие элементов в инфоблоке по заданному фильтру
+ * @param array $filter Фильтр с параметрами
+ * @return array Массив элементов
+ */
+function is_empty_iblock (array $filter):array
+{
+    $elements_list = CIBlockElement::GetList(
+        [],
+        $filter,
+        false,
+        false,
+        ['ID'],
+    );
+    $elements = [];
+    while ($arr_elements = $elements_list->Fetch()) {
+        $elements = $arr_elements;
+    }
+    return $elements;
+}

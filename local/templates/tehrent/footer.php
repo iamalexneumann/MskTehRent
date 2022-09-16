@@ -27,72 +27,103 @@ use Bitrix\Main\Localization\Loc;
             </div>
         </main>
         <footer class="main-footer">
-            <div class="footer-content bg-light pt-5 pb-5">
+            <div class="main-footer__content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-9">
-
-                        </div>
-                        <div class="col-lg-3">
-                            <a class="logo logo_header d-flex"
+                        <div class="col-lg-4 footer-contacts">
+                            <a class="logo footer-contacts__logo"
                                title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>"
                                 <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
                                 <img src="<?= $siteparam_footer_logo; ?>"
-                                     class="logo__img me-2"
+                                     class="logo__img"
                                      width="75"
                                      height="75"
                                      alt="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>">
-                                <span class="logo__wrapper d-flex flex-column justify-content-center">
+                                <span class="logo__wrapper">
                                     <span class="logo__name"><?= htmlspecialchars($siteparam_logo_name); ?></span>
                                     <span class="logo__description"><?= htmlspecialchars($siteparam_logo_description); ?></span>
                                 </span>
                             </a>
-                            <a class="d-block" href="tel:<?= $siteparam_main_phone_tel; ?>"
+                            <a class="footer-contacts__phone-link" href="tel:<?= $siteparam_main_phone_tel; ?>"
                                title="<?= Loc::getMessage('FOOTER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
                             <?php if ($siteparam_schedule): ?>
-                            <div class="d-block"><?= $siteparam_schedule; ?></div>
+                            <div class="footer-contacts__item footer-contacts__item_schedule">
+                                <i class="footer-contacts__icon fa-regular fa-clock"></i>
+                                <?= $siteparam_schedule; ?></div>
                             <?php endif; ?>
                             <button type="button"
-                                    class="btn btn-warning"
+                                    class="btn btn-sm btn-warning footer-contacts__callback-btn"
                                     data-bs-toggle="modal"
                                     data-bs-target="#callbackModal"
                                     data-bs-source="<?= Loc::getMessage('FOOTER_CALLBACK_BTN_DATA_SOURCE'); ?>"><?= Loc::getMessage('FOOTER_CALLBACK_BTN_TEXT'); ?></button>
                             <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link || $siteparam_viber_number): ?>
-                            <ul>
+                            <ul class="messengers footer-contacts__messengers">
                                 <?php if ($siteparam_whatsapp_number): ?>
-                                <li>
+                                <li class="messengers__item">
                                     <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
+                                       class="messengers__link"
                                        target="_blank"
-                                       title="<?= Loc::getMessage('FOOTER_MESSENGERS_WHATSAPP_TITLE'); ?>"><i class="fa-brands fa-whatsapp"></i></a>
+                                       title="<?= Loc::getMessage('FOOTER_MESSENGERS_WHATSAPP_TITLE'); ?>"><i class="messengers__icon fa-brands fa-whatsapp"></i></a>
                                 </li>
                                 <?php endif; ?>
                                 <?php if ($siteparam_viber_number): ?>
-                                <li>
+                                <li class="messengers__item">
                                     <a href="<?= $siteparam_viber_link; ?>"
+                                       class="messengers__link"
                                        target="_blank"
-                                       title="<?= Loc::getMessage('FOOTER_MESSENGERS_VIBER_TITLE'); ?>"><i class="fa-brands fa-viber"></i></a>
+                                       title="<?= Loc::getMessage('FOOTER_MESSENGERS_VIBER_TITLE'); ?>"><i class="messengers__icon fa-brands fa-viber"></i></a>
                                 </li>
                                 <?php endif; ?>
                                 <?php if ($siteparam_telegram_link): ?>
-                                <li>
+                                <li class="messengers__item">
                                     <a href="<?= $siteparam_telegram_link; ?>"
+                                       class="messengers__link"
                                        target="_blank"
-                                       title="<?= Loc::getMessage('FOOTER_MESSENGERS_TELEGRAM_TITLE'); ?>"><i class="fa-brands fa-telegram"></i></a>
+                                       title="<?= Loc::getMessage('FOOTER_MESSENGERS_TELEGRAM_TITLE'); ?>"><i class="messengers__icon fa-brands fa-telegram"></i></a>
                                 </li>
                                 <?php endif; ?>
                             </ul>
                             <?php endif; ?>
-                            <a href="mailto:<?= $siteparam_email; ?>" class="d-block"><?= $siteparam_email; ?></a>
-                            <div class="d-block"><?= $siteparam_address; ?></div>
+                            <div class="footer-contacts__item footer-contacts__item_email">
+                                <i class="footer-contacts__icon fa-regular fa-envelope"></i>
+                                <a href="mailto:<?= $siteparam_email; ?>"><?= $siteparam_email; ?></a>
+                            </div>
+                            <div class="footer-contacts__item footer-contacts__item_address">
+                                <i class="footer-contacts__icon fa-solid fa-location-dot"></i>
+                                <?= $siteparam_address; ?>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 footer-navigation">
+                            <?php
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:menu",
+                                "footer_menu",
+                                Array(
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "CHILD_MENU_TYPE" => "",
+                                    "DELAY" => "N",
+                                    "MAX_LEVEL" => "3",
+                                    "MENU_CACHE_GET_VARS" => "",
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_TYPE" => "A",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "ROOT_MENU_TYPE" => "services_menu",
+                                    "USE_EXT" => "Y",
+                                    "COMPONENT_TEMPLATE" => ""
+                                ),
+                                false
+                            ); ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
+            <div class="main-footer__copyright footer-copyright">
                 <div class="container">
                     &#169; <?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>, 2011-<?= date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT_YEARS_TEXT'); ?>. <?= Loc::getMessage('FOOTER_COPYRIGHT_RIGHTS_TEXT'); ?>.
-                    <a href="/privacy-policy/"><?= Loc::getMessage('FOOTER_COPYRIGHT_PRIVACY_LINK_TEXT'); ?></a>
-                    <a href="/sitemap/"><?= Loc::getMessage('FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'); ?></a>
+                    <div class="footer-copyright__links">
+                        <a href="/privacy-policy/" class="footer-copyright__link"><?= Loc::getMessage('FOOTER_COPYRIGHT_PRIVACY_LINK_TEXT'); ?></a>
+                        <a href="/sitemap/" class="footer-copyright__link"><?= Loc::getMessage('FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'); ?></a>
+                    </div>
                 </div>
             </div>
         </footer>
