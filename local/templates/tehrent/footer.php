@@ -32,13 +32,13 @@ use Bitrix\Main\Localization\Loc;
                     <div class="row">
                         <div class="col-lg-4 footer-contacts">
                             <a class="logo footer-contacts__logo"
-                               title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>"
+                               title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>"
                                 <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
                                 <img src="<?= $siteparam_footer_logo; ?>"
                                      class="logo__img"
                                      width="75"
                                      height="75"
-                                     alt="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>">
+                                     alt="<?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>">
                                 <span class="logo__wrapper">
                                     <span class="logo__name"><?= htmlspecialchars($siteparam_logo_name); ?></span>
                                     <span class="logo__description"><?= htmlspecialchars($siteparam_logo_description); ?></span>
@@ -119,7 +119,7 @@ use Bitrix\Main\Localization\Loc;
             </div>
             <div class="main-footer__copyright footer-copyright">
                 <div class="container">
-                    &#169; <?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>, 2011-<?= date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT_YEARS_TEXT'); ?>. <?= Loc::getMessage('FOOTER_COPYRIGHT_RIGHTS_TEXT'); ?>.
+                    &#169; <?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>, 2011-<?= date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT_YEARS_TEXT'); ?>. <?= Loc::getMessage('FOOTER_COPYRIGHT_RIGHTS_TEXT'); ?>.
                     <div class="footer-copyright__links">
                         <a href="/privacy-policy/" class="footer-copyright__link"><?= Loc::getMessage('FOOTER_COPYRIGHT_PRIVACY_LINK_TEXT'); ?></a>
                         <a href="/sitemap/" class="footer-copyright__link"><?= Loc::getMessage('FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'); ?></a>

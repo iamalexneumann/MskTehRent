@@ -18,6 +18,10 @@ $siteparam_telegram_link = \COption::GetOptionString( 'askaron.settings', 'UF_TE
 $siteparam_viber_number = \COption::GetOptionString( 'askaron.settings', 'UF_VIBER_NUMBER') ?? '';
 $siteparam_address = \COption::GetOptionString( 'askaron.settings', 'UF_ADDRESS') ?? '';
 
+$siteparam_price_aerial_platform = \COption::GetOptionString( 'askaron.settings', 'UF_PRICE_AERIAL_PLATFORM') ?? '';
+$siteparam_price_truck_crane = \COption::GetOptionString( 'askaron.settings', 'UF_PRICE_TRUCK_CRANE') ?? '';
+$siteparam_price_manipulators = \COption::GetOptionString( 'askaron.settings', 'UF_PRICE_MANIPULATORS') ?? '';
+
 $siteparam_api_key_yandex_map = \COption::GetOptionString( 'askaron.settings', 'UF_API_KEY_YANDEX_MAP') ?? '';
 $siteparam_coors_yandex_map = \COption::GetOptionString( 'askaron.settings', 'UF_COORS_YANDEX_MAP') ?? '';
 $siteparam_zoom_yandex_map = \COption::GetOptionString( 'askaron.settings', 'UF_ZOOM_YANDEX_MAP') ?? '';

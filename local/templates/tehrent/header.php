@@ -54,13 +54,13 @@ Loc::loadLanguageFile(__FILE__);
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="logo logo_header"
-                   title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>"
+                   title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>"
                     <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
                     <img src="<?= $siteparam_main_logo; ?>"
                          class="logo__img"
                          width="75"
                          height="75"
-                         alt="<?= htmlspecialchars($siteparam_logo_name . ' - ' . $siteparam_logo_description); ?>">
+                         alt="<?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>">
                     <span class="logo__wrapper">
                         <span class="logo__name"><?= htmlspecialchars($siteparam_logo_name); ?></span>
                         <span class="logo__description"><?= htmlspecialchars($siteparam_logo_description); ?></span>
