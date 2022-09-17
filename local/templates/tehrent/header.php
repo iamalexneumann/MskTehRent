@@ -107,20 +107,47 @@ Loc::loadLanguageFile(__FILE__);
             </div>
         </nav>
     </header>
-    <main class="pt-5 pb-5">
-        <div class="container">
-            <header class="mb-5">
+    <div class="container">
+        <div class="row">
+            <aside class="main-aside col-lg-4">
                 <?php
                 $APPLICATION->IncludeComponent(
-                    "bitrix:breadcrumb",
-                    "breadcrumb",
+                    "bitrix:menu",
+                    "aside_menu",
                     Array(
-                        "START_FROM" => "0",
-                        "PATH" => "",
-                        "SITE_ID" => SITE_ID,
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "3",
+                        "MENU_CACHE_GET_VARS" => "",
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "aside_menu",
+                        "USE_EXT" => "Y",
+                        "COMPONENT_TEMPLATE" => ""
                     ),
                     false
                 ); ?>
-                <h1><?php $APPLICATION->ShowTitle(false); ?></h1>
-                <?php $APPLICATION->ShowViewContent('MAIN_SUBTITLE'); ?>
-            </header>
+                <button type="button"
+                        class="btn btn-dark main-aside__order-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#orderModal"
+                        data-bs-source="<?= Loc::getMessage('FOOTER_CALLBACK_BTN_DATA_SOURCE'); ?>"><?= Loc::getMessage('HEADER_ORDER_BTN_TEXT'); ?></button>
+            </aside>
+            <main class="main-area col-lg-8">
+                <header class="page-header">
+                    <?php
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:breadcrumb",
+                        "breadcrumb",
+                        Array(
+                            "START_FROM" => "0",
+                            "PATH" => "",
+                            "SITE_ID" => SITE_ID,
+                        ),
+                        false
+                    ); ?>
+                    <h1 class="page-header__title"><?php $APPLICATION->ShowTitle(false); ?></h1>
+                    <?php $APPLICATION->ShowViewContent('MAIN_SUBTITLE'); ?>
+                </header>

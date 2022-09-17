@@ -24,8 +24,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 use Bitrix\Main\Localization\Loc;
 ?>
+                </main>
             </div>
-        </main>
+        </div>
         <footer class="main-footer">
             <div class="main-footer__content">
                 <div class="container">
@@ -107,7 +108,7 @@ use Bitrix\Main\Localization\Loc;
                                     "MENU_CACHE_TIME" => "3600",
                                     "MENU_CACHE_TYPE" => "A",
                                     "MENU_CACHE_USE_GROUPS" => "Y",
-                                    "ROOT_MENU_TYPE" => "services_menu",
+                                    "ROOT_MENU_TYPE" => "footer_menu",
                                     "USE_EXT" => "Y",
                                     "COMPONENT_TEMPLATE" => ""
                                 ),
@@ -146,7 +147,7 @@ use Bitrix\Main\Localization\Loc;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="h5 modal-title" id="orderModalLabel"></div>
+                        <div class="h5 modal-title" id="orderModalLabel"><?= Loc::getMessage('ORDER_MODAL_TITLE'); ?></div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>"></button>
                     </div>
                     <div class="modal-body">

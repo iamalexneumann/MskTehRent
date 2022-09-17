@@ -1,11 +1,12 @@
-.footer-menu {
+.aside-menu {
   padding: 0;
+  margin: 0 0 30px 0;
   list-style: none;
 
   &__title {
     display: inline-block;
     vertical-align: middle;
-    color: var(--my-white);
+    color: var(--my-black);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -32,6 +33,7 @@
 
   &__link {
     font-size: 0.85rem;
+    color: var(--my-black);
   }
 
   &__link_active {

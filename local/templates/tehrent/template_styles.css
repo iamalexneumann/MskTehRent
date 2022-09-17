@@ -79,7 +79,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 2.5rem; }
+  font-size: 2.25rem; }
 
 h2,
 .h2 {
@@ -158,6 +158,33 @@ h5,
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1; }
+
+.main-aside {
+  position: relative;
+  background: #ffc13b;
+  padding: 50px 30px 50px 0; }
+  .main-aside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc13b; }
+
+.main-area {
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.page-header {
+  margin-bottom: 50px; }
+  .page-header__title {
+    margin: 0; }
+  .page-header .breadcrumb {
+    margin-bottom: 0;
+    font-size: 0.85rem; }
 
 .main-footer__content {
   background: #1c1e22;
