@@ -5,11 +5,13 @@
   .aside-menu__title {
     display: inline-block;
     vertical-align: middle;
-    color: var(--my-black);
+    color: var(--dark);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
     margin-bottom: 20px; }
+  .aside-menu__title:hover {
+    color: var(--dark-hover); }
   .aside-menu__submenu {
     margin: 0 0 50px 0;
     padding: 0;
@@ -22,7 +24,9 @@
     margin-right: 5px; }
   .aside-menu__link {
     font-size: 0.85rem;
-    color: var(--my-black); }
+    color: var(--dark); }
+  .aside-menu__link:hover {
+    color: var(--dark-hover); }
   .aside-menu__link_active {
     font-weight: 700; }
 

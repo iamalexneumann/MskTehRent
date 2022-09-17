@@ -51,7 +51,7 @@ Loc::loadLanguageFile(__FILE__);
     <?= $siteparam_scripts_body_before; ?>
     <?php $APPLICATION->ShowPanel(); ?>
     <header class="main-header">
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-white">
             <div class="container-fluid">
                 <a class="logo logo_header"
                    title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>"

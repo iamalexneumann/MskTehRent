@@ -1,14 +1,13 @@
 :root {
-  --my-black: #1c1c24;
-  --my-white: #ffffff;
-  --my-text-muted: #949494;
-  --my-link-color: #feb301;
-  --my-link-color-hover: #fec94d;
-  --my-transition: all .25s ease-in-out;
-  --my-warning-bg: #feb301;
-  --my-warning-bg-hover: #fec94d;
-  --my-warning-bg-active: #e4b445;
-  --my-warning-bg-text: #1c1c24;
+  --light: #ffffff;
+  --gray: #f7f7f7;
+  --warning: #feb301;
+  --warning-hover: #fec94d;
+  --warning-active: #e4b445;
+  --dark: #1c1c24;
+  --dark-hover: #343a40;
+  --text-muted: #949494;
+  --transition: all .25s ease-in-out;
   --hex-side: 25px;
 }
 
@@ -17,9 +16,9 @@ body {
   font-size: 1rem;
   line-height: 1.4;
   font-family: 'Montserrat', Arial, sans-serif;
-  color: var(--my-black);
+  color: var(--dark);
 
-  background: #ffffff;
+  background: var(--gray);
 }
 
 img {
@@ -33,12 +32,12 @@ figure {
 
 a {
   text-decoration: none;
-  color: var(--my-link-color);
-  transition: var(--my-transition);
+  color: var(--warning);
+  transition: var(--transition);
 }
 
 a:hover {
-  color: var(--my-link-color-hover);
+  color: var(--warning-hover);
 }
 
 .btn {
@@ -54,18 +53,25 @@ a:hover {
 }
 
 .btn-warning {
-  --bs-btn-color: var(--my-warning-bg-text);
-  --bs-btn-bg: var(--my-warning-bg);
-  --bs-btn-border-color: var(--my-warning-bg);
-  --bs-btn-hover-color: var(--my-warning-bg-text);
-  --bs-btn-hover-bg: var(--my-warning-bg-hover);
-  --bs-btn-hover-border-color: var(--my-warning-bg-hover);
-  --bs-btn-active-color: var(--my-warning-bg-text);
-  --bs-btn-active-bg: var(--my-warning-bg-active);
-  --bs-btn-active-border-color: var(--my-warning-bg-active);
-  --bs-btn-disabled-color: var(--my-warning-bg-text);
-  --bs-btn-disabled-bg: var(--my-warning-bg);
-  --bs-btn-disabled-border-color: var(--my-warning-bg);
+  --bs-btn-color: var(--dark);
+  --bs-btn-bg: var(--warning);
+  --bs-btn-border-color: var(--warning);
+  --bs-btn-hover-color: var(--dark);
+  --bs-btn-hover-bg: var(--warning-hover);
+  --bs-btn-hover-border-color: var(--warning-hover);
+  --bs-btn-active-color: var(--dark);
+  --bs-btn-active-bg: var(--warning-active);
+  --bs-btn-active-border-color: var(--warning-active);
+  --bs-btn-disabled-color: var(--dark);
+  --bs-btn-disabled-bg: var(--warning);
+  --bs-btn-disabled-border-color: var(--warning);
+}
+
+.btn-dark {
+  --bs-btn-bg: var(--dark);
+  --bs-btn-border-color: var(--dark);
+  --bs-btn-hover-bg: var(--dark-hover);
+  --bs-btn-hover-border-color: var(--dark-hover);
 }
 
 h1,
@@ -131,14 +137,14 @@ h5,
   }
 
   &__name {
-    color: var(--my-black);
+    color: var(--dark);
     font-weight: 800;
     font-size: 1.5rem;
     margin-bottom: 5px;
   }
 
   &__description {
-    color: var(--my-text-muted);
+    color: var(--text-muted);
     font-size: 0.85rem;
   }
 }
@@ -161,9 +167,9 @@ h5,
     font-size: 1.25rem;
     width: calc(var(--hex-side) * 1.732);
     height: var(--hex-side);
-    background: var(--my-warning-bg);
+    background: var(--warning);
     position: relative;
-    color: var(--my-warning-bg-text);
+    color: var(--dark);
     margin: calc(var(--hex-side) /2) 0;
   }
 
@@ -173,10 +179,10 @@ h5,
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--my-warning-bg);
+    background: var(--warning);
     top: 0;
     left: 0;
-    transition: var(--my-transition);
+    transition: var(--transition);
   }
 
   &__link::before {
@@ -190,8 +196,8 @@ h5,
   &__link:hover,
   &__link:hover::before,
   &__link:hover::after {
-    background: var(--my-warning-bg-hover);
-    color: var(--my-warning-bg-text);
+    background: var(--warning-hover);
+    color: var(--dark);
   }
 
   &__icon {
@@ -205,7 +211,7 @@ h5,
 
 .main-aside {
   position: relative;
-  background: #ffc13b;
+  background: var(--warning);
   padding: 50px 30px 50px 0;
 
   &::before {
@@ -216,7 +222,7 @@ h5,
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: #ffc13b;
+    background-color: var(--warning);
   }
 }
 
@@ -242,13 +248,13 @@ h5,
 .main-footer {
   &__content {
     background: #1c1e22;
-    color: var(--my-white);
+    color: var(--light);
     padding: 50px 0;
   }
 
   &__copyright {
     background: #101010;
-    color: var(--my-white);
+    color: var(--light);
     padding: 15px 0;
     font-size: 0.85rem;
   }
@@ -260,7 +266,7 @@ h5,
   }
 
   &__logo .logo__name {
-    color: var(--my-white);
+    color: var(--light);
   }
 
   &__phone-link {

@@ -6,11 +6,15 @@
   &__title {
     display: inline-block;
     vertical-align: middle;
-    color: var(--my-black);
+    color: var(--dark);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
     margin-bottom: 20px;
+  }
+
+  &__title:hover {
+    color: var(--dark-hover);
   }
 
   &__submenu {
@@ -33,7 +37,11 @@
 
   &__link {
     font-size: 0.85rem;
-    color: var(--my-black);
+    color: var(--dark);
+  }
+
+  &__link:hover {
+    color: var(--dark-hover);
   }
 
   &__link_active {
