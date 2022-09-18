@@ -50,7 +50,8 @@ use Bitrix\Main\Localization\Loc;
                             <?php if ($siteparam_schedule): ?>
                             <div class="footer-contacts__item footer-contacts__item_schedule">
                                 <i class="footer-contacts__icon fa-regular fa-clock"></i>
-                                <?= $siteparam_schedule; ?></div>
+                                <?= $siteparam_schedule; ?>
+                            </div>
                             <?php endif; ?>
                             <button type="button"
                                     class="btn btn-sm btn-warning footer-contacts__callback-btn"

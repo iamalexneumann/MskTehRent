@@ -1,0 +1,20 @@
+.photos-list__item {
+  margin-bottom: calc((var(--bs-gutter-x) * .5) * 2); }
+.photos-list__link {
+  position: relative;
+  display: block;
+  overflow: hidden; }
+  .photos-list__link:hover img {
+    transform: scale(1.0125); }
+.photos-list__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
+.photos-list__figcaption {
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: var(--font-size-small);
+  font-style: italic;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

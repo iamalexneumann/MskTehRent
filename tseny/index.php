@@ -15,7 +15,7 @@ if ($siteparam_price_aerial_platform) {
         Array(
             "JSON" => $siteparam_price_aerial_platform,
         ),
-        $component,
+        '',
         Array(
             "HIDE_ICONS" => "Y"
         )
@@ -31,7 +31,7 @@ if ($siteparam_price_truck_crane) {
         Array(
             "JSON" => $siteparam_price_truck_crane,
         ),
-        $component,
+        '',
         Array(
             "HIDE_ICONS" => "Y"
         )
@@ -47,7 +47,7 @@ if ($siteparam_price_manipulators) {
         Array(
             "JSON" => $siteparam_price_manipulators,
         ),
-        $component,
+        '',
         Array(
             "HIDE_ICONS" => "Y"
         )
