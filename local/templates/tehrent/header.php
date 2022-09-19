@@ -13,6 +13,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var COption $siteparam_main_phone_tel
  * @var COption $siteparam_logo_name
  * @var COption $siteparam_logo_description
+ * @var COption $siteparam_whatsapp_number
+ * @var COption $siteparam_whatsapp_number_tel
+ * @var COption $siteparam_whatsapp_message
+ * @var COption $siteparam_viber_number
+ * @var COption $siteparam_viber_link
+ * @var COption $siteparam_telegram_link
  */
 use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
@@ -51,7 +57,7 @@ Loc::loadLanguageFile(__FILE__);
     <?= $siteparam_scripts_body_before; ?>
     <?php $APPLICATION->ShowPanel(); ?>
     <header class="main-header sticky-top">
-        <nav class="navbar navbar-expand-lg bg-white">
+        <nav class="navbar navbar-expand-xl bg-white">
             <div class="container-fluid">
                 <a class="logo logo_header"
                    title="<?= htmlspecialchars($siteparam_logo_name . ' - ' . custom_lcfirst($siteparam_logo_description)); ?>"
@@ -68,7 +74,8 @@ Loc::loadLanguageFile(__FILE__);
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
                         data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-label="<?= Loc::getMessage('HEADER_NAVBAR_ARIA_LABEL'); ?>">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler__text"><?= Loc::getMessage('HEADER_NAVBAR_TOGGLER_TEXT'); ?></span>
+                    <span class="navbar-toggler__icon"><i class="fa-solid fa-bars"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <div class="ms-auto me-auto">
@@ -95,8 +102,41 @@ Loc::loadLanguageFile(__FILE__);
                             false
                         ); ?>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <a href="tel:<?= $siteparam_main_phone_tel; ?>" title="<?= Loc::getMessage('HEADER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
+                    <div class="header-contacts">
+                        <a href="tel:<?= $siteparam_main_phone_tel; ?>"
+                           class="header-contacts__phone-link"
+                           title="<?= Loc::getMessage('HEADER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
+                        <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link || $siteparam_viber_number): ?>
+                        <div class="header-contacts__messengers-wrapper">
+                            <div class="header-contacts__messengers-title"><?= Loc::getMessage('HEADER_MESSENGERS_BLOCK_TITLE'); ?>:</div>
+                            <ul class="messengers header-contacts__messengers">
+                                <?php if ($siteparam_whatsapp_number): ?>
+                                <li class="messengers__item">
+                                    <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
+                                       class="messengers__link"
+                                       target="_blank"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_WHATSAPP_TITLE'); ?>"><i class="messengers__icon fa-brands fa-whatsapp"></i></a>
+                                </li>
+                                <?php endif; ?>
+                                <?php if ($siteparam_viber_number): ?>
+                                <li class="messengers__item">
+                                    <a href="<?= $siteparam_viber_link; ?>"
+                                       class="messengers__link"
+                                       target="_blank"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_VIBER_TITLE'); ?>"><i class="messengers__icon fa-brands fa-viber"></i></a>
+                                </li>
+                                <?php endif; ?>
+                                <?php if ($siteparam_telegram_link): ?>
+                                <li class="messengers__item">
+                                    <a href="<?= $siteparam_telegram_link; ?>"
+                                       class="messengers__link"
+                                       target="_blank"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_TELEGRAM_TITLE'); ?>"><i class="messengers__icon fa-brands fa-telegram"></i></a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,7 +238,6 @@ Loc::loadLanguageFile(__FILE__);
                             data-bs-toggle="modal"
                             data-bs-target="#orderModal"
                             data-bs-source="<?= Loc::getMessage('ASIDE_CALLBACK_BTN_DATA_SOURCE'); ?>"><?= Loc::getMessage('ASIDE_ORDER_BTN_TEXT'); ?></button>
-
                 </div>
             </aside>
             <main class="main-area col-lg-8">

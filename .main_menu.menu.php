@@ -1,13 +1,6 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная", 
-		"/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Спецтехника", 
 		"/spetstekhnika/", 
 		Array(), 

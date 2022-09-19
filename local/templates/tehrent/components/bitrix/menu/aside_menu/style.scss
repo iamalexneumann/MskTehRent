@@ -11,10 +11,10 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     margin-bottom: 20px;
-  }
 
-  &__title:hover {
-    color: var(--dark-hover);
+    &:hover {
+      color: var(--dark-hover);
+    }
   }
 
   &__submenu {
@@ -38,10 +38,10 @@
   &__link {
     font-size: var(--font-size-small);
     color: var(--dark);
-  }
 
-  &__link:hover {
-    color: var(--dark-hover);
+    &:hover {
+      color: var(--dark-hover);
+    }
   }
 
   &__link_active {
