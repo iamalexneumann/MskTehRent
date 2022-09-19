@@ -20,7 +20,7 @@
   .footer-menu__icon {
     margin-right: 5px; }
   .footer-menu__link {
-    font-size: 0.85rem; }
+    font-size: var(--font-size-small); }
   .footer-menu__link_active {
     font-weight: 700; }
 

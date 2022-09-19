@@ -28,14 +28,17 @@ if (!empty($images)):
         <?php foreach ($images as $image): ?>
         <div class="col-xl-4 col-6 photos-list__col">
             <figure class="photos-list__item">
-                <a data-fancybox="gallery-page-list" class="photos-list__link" href="<?= $image['ORIGIN_SRC']; ?>">
+                <a href="<?= $image['ORIGIN_SRC']; ?>"
+                   data-fancybox="gallery-page-list"
+                   <?php if ($image['DESCRIPTION']): ?>data-caption="<?= $image['DESCRIPTION']; ?>"<?php endif; ?>
+                   class="photos-list__link">
                     <img src="<?= $image['SRC']; ?>"
                          class="photos-list__img blur-up lazyload"
                          data-src="<?= $image['DETAIL_SRC']; ?>"
                          alt="<?= $image['DESCRIPTION']; ?>"
                          width="500"
                          height="500"></a>
-                <?php if (!empty($image['DESCRIPTION'])): ?>
+                <?php if ($image['DESCRIPTION']): ?>
                 <figcaption class="photos-list__figcaption">
                     <?= $image['DESCRIPTION']; ?>
                 </figcaption>

@@ -23,7 +23,7 @@
   .aside-menu__icon {
     margin-right: 5px; }
   .aside-menu__link {
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
     color: var(--dark); }
   .aside-menu__link:hover {
     color: var(--dark-hover); }

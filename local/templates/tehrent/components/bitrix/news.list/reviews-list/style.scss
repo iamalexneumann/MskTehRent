@@ -1,0 +1,33 @@
+.reviews-list {
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__name {
+    font-weight: 700;
+    margin-right: 20px;
+  }
+
+  &__date {
+    color: var(--text-muted);
+    font-size: var(--font-size-small);
+  }
+
+  &__text {
+
+  }
+
+  &__img-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+  }
+}
