@@ -174,7 +174,7 @@ Loc::loadLanguageFile(__FILE__);
                     <?php
                     $APPLICATION->IncludeComponent(
                         "bitrix:news.list",
-                        "reviews-list",
+                        "reviews_list",
                         Array(
                             "ACTIVE_DATE_FORMAT" => "d.m.Y",
                             "ADD_SECTIONS_CHAIN" => "N",
