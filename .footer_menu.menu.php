@@ -4,7 +4,8 @@ $aMenuLinks = Array(
 		"Главная", 
 		"/", 
 		Array(),
-		Array(
+        Array(
+            'FROM_IBLOCK' => 1,
             'IS_PARENT' => '',
             'DEPTH_LEVEL' => 2,
         ),
@@ -13,43 +14,67 @@ $aMenuLinks = Array(
 	Array(
 		"Спецтехника", 
 		"/spetstekhnika/", 
-		Array(), 
 		Array(),
+        Array(
+            'FROM_IBLOCK' => 1,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+        ),
 		"" 
 	),
 	Array(
 		"Цены",
 		"/tseny/",
 		Array(),
-		Array(),
+        Array(
+            'FROM_IBLOCK' => 1,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+        ),
 		""
 	),
 	Array(
 		"Отзывы",
 		"/otzyvy/",
 		Array(),
-		Array(),
+        Array(
+            'FROM_IBLOCK' => 1,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+        ),
 		""
 	),
 	Array(
 		"О компании",
 		"/o-kompanii/",
 		Array(),
-		Array(),
+        Array(
+            'FROM_IBLOCK' => 1,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+        ),
 		""
 	),
 	Array(
 		"Фото",
 		"/foto/",
 		Array(),
-		Array(),
+        Array(
+            'FROM_IBLOCK' => 1,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+        ),
 		""
 	),
 	Array(
 		"Контакты",
 		"/kontakty/",
 		Array(),
-		Array(),
+		Array(
+            'FROM_IBLOCK' => 1,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+        ),
 		""
 	)
 );

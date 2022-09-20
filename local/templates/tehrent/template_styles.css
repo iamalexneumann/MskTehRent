@@ -73,6 +73,11 @@ a {
   --bs-btn-hover-bg: var(--dark-hover);
   --bs-btn-hover-border-color: var(--dark-hover); }
 
+.btn-light {
+  --bs-btn-bg: var(--light);
+  --bs-btn-border-color: var(--light);
+  --bs-btn-color: var(--dark); }
+
 h1,
 .h1,
 h2,
@@ -235,6 +240,45 @@ h5,
     .header-contacts {
       align-items: center; } }
 
+.first-screen {
+  background-color: #171717;
+  background: linear-gradient(90deg, #1c1e22 0%, rgba(6, 82, 221, 0) 85%), url(img/first-screen.jpg) 50% 50%;
+  background-size: cover;
+  color: #ffffff;
+  position: relative; }
+  .first-screen__container {
+    height: 100%; }
+  .first-screen__wrapper {
+    min-height: 700px;
+    max-width: 700px;
+    padding: 80px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+  .first-screen__title {
+    font-size: 3rem;
+    color: var(--light);
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase; }
+  .first-screen__description {
+    font-size: 1.25rem;
+    color: var(--light);
+    margin-bottom: 30px;
+    font-weight: 500; }
+  .first-screen__order-btn {
+    margin-right: 30px; }
+  @media (max-width: 767.98px) {
+    .first-screen {
+      min-height: 500px; }
+      .first-screen__title {
+        font-size: 1.75rem; }
+      .first-screen__order-btn {
+        margin-right: 0;
+        margin-bottom: 20px; } }
+
 .main-aside {
   position: relative;
   background: var(--warning);
@@ -257,6 +301,37 @@ h5,
   @media (max-width: 991.98px) {
     .main-aside {
       display: none; } }
+
+.main-section {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--border-color); }
+  .main-section:last-of-type {
+    border-bottom: none; }
+  .main-section__header {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; }
+  .main-section__title {
+    margin-top: 0;
+    margin-bottom: 10px; }
+  .main-section__subtitle {
+    color: var(--text-muted);
+    font-size: var(--font-size-small); }
+  .main-section__link {
+    font-size: var(--font-size-small);
+    display: flex;
+    align-items: center;
+    color: var(--warning); }
+    .main-section__link:hover {
+      color: var(--warning-hover); }
+  .main-section__icon {
+    font-size: 1rem;
+    margin-left: 5px; }
+  @media (max-width: 767.98px) {
+    .main-section__link {
+      margin-top: 10px; } }
 
 .aside-reviews {
   margin-bottom: 50px; }
@@ -282,9 +357,66 @@ h5,
   padding-left: 30px;
   padding-top: 50px;
   padding-bottom: 50px; }
+  .main-area_page-index {
+    padding-top: 0;
+    padding-bottom: 0; }
   @media (max-width: 991.98px) {
     .main-area {
       padding-left: calc(var(--bs-gutter-x) * .5); } }
+
+.index-features {
+  padding-top: 50px; }
+
+.features-list__item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start; }
+.features-list__icon {
+  --hex-side: 50px;
+  flex-shrink: 0;
+  font-size: 2rem;
+  width: calc(var(--hex-side) * 1.732);
+  height: var(--hex-side);
+  background: var(--warning);
+  position: relative;
+  color: var(--dark);
+  margin: calc(var(--hex-side) / 2) 0;
+  margin-right: 30px; }
+  .features-list__icon::before, .features-list__icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--warning);
+    top: 0;
+    left: 0; }
+  .features-list__icon::before {
+    transform: rotate(60deg); }
+  .features-list__icon::after {
+    transform: rotate(-60deg); }
+.features-list__fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; }
+.features-list__wrapper {
+  flex-grow: 1; }
+.features-list__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px; }
+@media (max-width: 767.98px) {
+  .features-list__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+  .features-list__icon {
+    --hex-side: 35px;
+    font-size: 1.5rem;
+    margin-right: 0; }
+  .features-list__title {
+    margin-top: 20px; } }
 
 .page-header {
   margin-bottom: 50px; }

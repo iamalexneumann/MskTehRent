@@ -29,12 +29,12 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
     <div class="col-lg-6 product-list__col">
         <article class="category-item">
             <a href="<?= $arSection['SECTION_PAGE_URL']; ?>" class="category-item__img-link" rel="nofollow">
-                <img src="<?= $arSection['PICTURE_LQIP']['SRC']; ?>"
-                     data-src="<?= $arSection['PICTURE']['SRC']; ?>"
+                <img src="<?= $arSection['SECTION_PICTURE_LQIP']['SRC']; ?>"
+                     data-src="<?= $arSection['SECTION_PICTURE']['SRC']; ?>"
                      class="category-item__img lazyload blur-up"
                      alt="<?= $arSection['NAME']; ?>"
-                     width="<?= $arSection['PICTURE']['WIDTH']; ?>"
-                     height="<?= $arSection['PICTURE']['HEIGHT']; ?>">
+                     width="<?= $arSection['SECTION_PICTURE']['WIDTH']; ?>"
+                     height="<?= $arSection['SECTION_PICTURE']['HEIGHT']; ?>">
             </a>
             <div class="category-item__wrapper">
                 <h<?=$param_small_card_tag_title; ?> class="category-item__title">
@@ -65,3 +65,4 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
         </article>
     </div>
 <?php endforeach; ?>
+</div>

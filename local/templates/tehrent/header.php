@@ -142,6 +142,24 @@ Loc::loadLanguageFile(__FILE__);
             </div>
         </nav>
     </header>
+    <?php if ($CurDir === '/'): ?>
+    <div class="first-screen">
+        <div class="container first-screen__container">
+            <div class="first-screen__wrapper">
+                <h1 class="first-screen__title"><?= Loc::getMessage('FIRST_SCREEN_TITLE'); ?></h1>
+                <div class="first-screen__description"><?= Loc::getMessage('FIRST_SCREEN_DESCRIPTION'); ?></div>
+                <div class="first-screen__buttons">
+                    <button type="button"
+                                class="btn btn-warning first-screen__order-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#orderModal"
+                                data-bs-source="<?= Loc::getMessage('ASIDE_CALLBACK_BTN_DATA_SOURCE'); ?>"><?= Loc::getMessage('FIRST_SCREEN_ORDER_BTN_TEXT'); ?></button>
+                    <a href="/spetstekhnika" class="btn btn-light first-screen__catalog-btn"><?= Loc::getMessage('FIRST_SCREEN_CATALOG_BTN_TEXT'); ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
     <div class="container">
         <div class="row">
             <aside class="main-aside col-lg-4">
@@ -240,7 +258,8 @@ Loc::loadLanguageFile(__FILE__);
                             data-bs-source="<?= Loc::getMessage('ASIDE_CALLBACK_BTN_DATA_SOURCE'); ?>"><?= Loc::getMessage('ASIDE_ORDER_BTN_TEXT'); ?></button>
                 </div>
             </aside>
-            <main class="main-area col-lg-8">
+            <main class="main-area<?php if ($CurDir === '/'): ?> main-area_page-index<?php endif; ?> col-lg-8">
+                <?php if ($CurDir !== '/'): ?>
                 <header class="page-header">
                     <?php
                     $APPLICATION->IncludeComponent(
@@ -256,3 +275,4 @@ Loc::loadLanguageFile(__FILE__);
                     <h1 class="page-header__title"><?php $APPLICATION->ShowTitle(false); ?></h1>
                     <?php $APPLICATION->ShowViewContent('MAIN_SUBTITLE'); ?>
                 </header>
+                <?php endif; ?>

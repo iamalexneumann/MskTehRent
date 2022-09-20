@@ -1,0 +1,7 @@
+<?php
+$MESS['PAGE_CONTACTS_MAIN_PHONE_TITLE'] = 'Позвонить';
+$MESS['PAGE_CONTACTS_CALLBACK_BTN_TEXT'] = 'Заказать звонок';
+$MESS['PAGE_CONTACTS_CALLBACK_BTN_DATA_SOURCE'] = "Кнопка на странице 'Контакты'";
+$MESS['PAGE_CONTACTS_MESSENGERS_TELEGRAM_TITLE'] = 'Написать в Telegram';
+$MESS['PAGE_CONTACTS_MESSENGERS_WHATSAPP_TITLE'] = 'Написать в WhatsApp';
+$MESS['PAGE_CONTACTS_MESSENGERS_VIBER_TITLE'] = 'Написать в Viber';

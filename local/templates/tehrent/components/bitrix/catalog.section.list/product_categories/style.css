@@ -10,7 +10,8 @@
   .element-list__item {
     margin-bottom: 10px; }
   .element-list__icon {
-    margin-right: 5px; }
+    margin-right: 5px;
+    font-size: 1rem; }
   .element-list__link {
     color: var(--dark); }
     .element-list__link:hover {
