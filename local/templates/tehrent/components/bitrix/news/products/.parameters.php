@@ -53,6 +53,18 @@ while ($arr_iblock_element = $iblock_element_list->Fetch()) {
 }
 
 $arTemplateParameters = [
+    "SECTIONS_SMALL_CARD_TAG_TITLE" => [
+        "NAME" => Loc::getMessage('SECTIONS_SMALL_CARD_TAG_TITLE'),
+        "TYPE" => "LIST",
+        "VALUES" => [
+            "2" => "<h2>",
+            "3" => "<h3>",
+            "4" => "<h4>",
+            "5" => "<h5>",
+            "6" => "<h6>"
+        ],
+        "DEFAULT" => "2",
+    ],
     "SMALL_CARD_TAG_TITLE" => [
         "NAME" => Loc::getMessage('NEWS_SMALL_CARD_TAG_TITLE'),
         "TYPE" => "LIST",

@@ -2,7 +2,6 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Спецтехника");
 ?>
-
 <?php
 $APPLICATION->IncludeComponent(
     "bitrix:news",
@@ -83,9 +82,10 @@ $APPLICATION->IncludeComponent(
             4 => "ATT_HOIST",
             5 => "ATT_DIMENSIONS_W_D_H",
             6 => "ATT_JIB_LENGTH",
-            7 => "ATT_DIMENSIONS_L_W",
-            8 => "ATT_BOOM_LENGTH",
-            9 => "",
+            7 => "ATT_BOOM_CAPACITY",
+            8 => "ATT_BODY_LOAD_CAPACITY",
+            9 => "ATT_DIMENSIONS_L_W",
+            10 => "",
         ),
         "MESSAGE_404" => "",
         "META_DESCRIPTION" => "-",
@@ -97,7 +97,7 @@ $APPLICATION->IncludeComponent(
         "PAGER_SHOW_ALL" => "N",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main_pagination",
-        "PAGER_TITLE" => "Новости",
+        "PAGER_TITLE" => "",
         "PREVIEW_TRUNCATE_LEN" => "",
         "SEF_FOLDER" => "/spetstekhnika/",
         "SEF_MODE" => "Y",
@@ -119,7 +119,8 @@ $APPLICATION->IncludeComponent(
         "USE_RSS" => "N",
         "USE_SEARCH" => "N",
         "USE_SHARE" => "N",
-        "COMPONENT_TEMPLATE" => ".default_simple",
+        "COMPONENT_TEMPLATE" => "products",
+        "SECTIONS_SMALL_CARD_TAG_TITLE" => "2",
         "SEF_URL_TEMPLATES" => array(
             "news" => "",
             "section" => "#SECTION_CODE#/",
@@ -128,5 +129,4 @@ $APPLICATION->IncludeComponent(
     ),
     false
 ); ?>
-
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

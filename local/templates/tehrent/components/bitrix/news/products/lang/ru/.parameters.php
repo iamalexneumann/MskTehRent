@@ -1,5 +1,6 @@
 <?php
-$MESS['NEWS_SMALL_CARD_TAG_TITLE'] = 'Уровень заголовка карточки';
+$MESS['NEWS_SMALL_CARD_TAG_TITLE'] = 'Уровень заголовка карточки товара';
+$MESS['SECTIONS_SMALL_CARD_TAG_TITLE'] = 'Уровень заголовка карточки раздела';
 $MESS['NEWS_SHOW_FORM_BLOCK'] = 'Показывать блок с формой';
 $MESS['NEWS_FORM_IBLOCK_TYPE'] = 'Тип инфоблока формы';
 $MESS['NEWS_FORM_IBLOCK_ID'] = 'ID инфоблока формы';
