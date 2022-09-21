@@ -192,7 +192,7 @@ $APPLICATION->SetTitle("Главная");
     <header class="main-section__header">
         <div class="main-section__wrapper">
             <h2 class="main-section__title">Фотографии</h2>
-            <div class="main-section__subtitle">Посмотрите фото наших работ и автопарка</div>
+            <div class="main-section__subtitle">Здесь вы можете увидеть реальные фотографии спецтехники, которую мы сдаем в аренду нашим клиентам.</div>
         </div>
     </header>
     <?php

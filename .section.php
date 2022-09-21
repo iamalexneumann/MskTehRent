@@ -1,9 +1,9 @@
 <?
-$sSectionName = 'Главная';
-$arDirProperties = array(
-	'title' => 'Title',
-	'description' => 'Description',
-	'keywords' => 'Keywords',
-	'robots' => 'index, follow'
+$sSectionName = "Аренда спецтехники в Москве";
+$arDirProperties = Array(
+   "description" => "Аренда спецтехники в Москве: автокраны, автовышки и манипуляторы. Доставка техники по Москве.",
+   "keywords" => "Аренда спецтехники в Москве",
+   "TITLE" => "Аренда спецтехники в Москве",
+   "ROBOTS" => "index, follow"
 );
 ?>

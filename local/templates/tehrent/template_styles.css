@@ -206,7 +206,8 @@ h5,
 .main-header {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.14); }
   .main-header .navbar .container-fluid {
-    --bs-gutter-x: 0.5rem; }
+    --bs-gutter-x: 0.5rem;
+    padding-right: 10px; }
 
 .header-contacts {
   display: flex;
@@ -275,6 +276,9 @@ h5,
       min-height: 500px; }
       .first-screen__title {
         font-size: 1.75rem; }
+      .first-screen__buttons {
+        display: flex;
+        flex-direction: column; }
       .first-screen__order-btn {
         margin-right: 0;
         margin-bottom: 20px; } }

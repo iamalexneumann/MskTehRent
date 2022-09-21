@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Фото");
+$APPLICATION->SetTitle("Фотогалерея работы нашей техники");
 ?>
-
+<p>Здесь вы можете увидеть реальные фотографии спецтехники, которую мы сдаем в аренду нашим клиентам.</p>
 <?php
 if ($siteparam_photos) {
     $APPLICATION->IncludeComponent(

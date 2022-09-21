@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Спецтехника");
+$APPLICATION->SetTitle("Аренда автовышек, автокранов и манипуляторов в Москве");
 ?>
 <?php
 $APPLICATION->IncludeComponent(

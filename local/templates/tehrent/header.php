@@ -26,7 +26,7 @@ Loc::loadLanguageFile(__FILE__);
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID; ?>">
 <head>
-    <title><?php $APPLICATION->ShowTitle(); ?></title>
+    <title><?php $APPLICATION->ShowTitle(); ?> | <?= $siteparam_logo_name; ?></title>
     <?php
     echo $siteparam_scripts_head;
     use Bitrix\Main\UI\Extension;

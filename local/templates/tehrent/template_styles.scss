@@ -283,6 +283,7 @@ h5,
 
   .navbar .container-fluid {
     --bs-gutter-x: 0.5rem;
+    padding-right: 10px;
   }
 }
 
@@ -391,6 +392,11 @@ h5,
 
     &__title {
       font-size: 1.75rem;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
     }
 
     &__order-btn {
