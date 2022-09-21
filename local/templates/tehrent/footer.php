@@ -134,11 +134,37 @@ use Bitrix\Main\Localization\Loc;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="h5 modal-title" id="callbackModalLabel"><?= Loc::getMessage('CALLBACK_MODAL_TITLE'); ?></div>
+                        <div class="modal-title" id="callbackModalLabel"><?= Loc::getMessage('CALLBACK_MODAL_TITLE'); ?></div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>"></button>
                     </div>
                     <div class="modal-body">
-
+                        <div class="modal-cta"><?= Loc::getMessage('MODAL_FORM_CTA'); ?></div>
+                        <?php
+                        $APPLICATION->IncludeComponent(
+                            "custom.bitrix:main.feedback",
+                            "main_form",
+                            array(
+                                "COMPOSITE_FRAME_MODE" => "A",
+                                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                "EMAIL_TO" => $siteparam_email,
+                                "EVENT_MESSAGE_ID" => array(
+                                    0 => "7",
+                                ),
+                                "OK_TEXT" => Loc::getMessage('MODAL_FORM_OK_TEXT'),
+                                "REQUIRED_FIELDS" => array(
+                                    1 => "USER_PHONE",
+                                ),
+                                "USE_CAPTCHA" => "N",
+                                "COMPONENT_TEMPLATE" => "main_form",
+                                "REDIRECT_URL" => "",
+                                "AJAX_MODE" => "Y",
+                                "AJAX_OPTION_SHADOW" => "N",
+                                "AJAX_OPTION_JUMP" => "N",
+                                "AJAX_OPTION_STYLE" => "Y",
+                                "AJAX_OPTION_HISTORY" => "N",
+                            ),
+                            false
+                        ); ?>
                     </div>
                 </div>
             </div>
@@ -148,11 +174,37 @@ use Bitrix\Main\Localization\Loc;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="h5 modal-title" id="orderModalLabel"><?= Loc::getMessage('ORDER_MODAL_TITLE'); ?></div>
+                        <div class="modal-title" id="orderModalLabel"><?= Loc::getMessage('ORDER_MODAL_TITLE'); ?></div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>"></button>
                     </div>
                     <div class="modal-body">
-
+                        <div class="modal-cta"><?= Loc::getMessage('MODAL_FORM_CTA'); ?></div>
+                        <?php
+                        $APPLICATION->IncludeComponent(
+                            "custom.bitrix:main.feedback",
+                            "main_form",
+                            array(
+                                "COMPOSITE_FRAME_MODE" => "A",
+                                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                "EMAIL_TO" => $siteparam_email,
+                                "EVENT_MESSAGE_ID" => array(
+                                    0 => "11",
+                                ),
+                                "OK_TEXT" => Loc::getMessage('MODAL_FORM_OK_TEXT'),
+                                "REQUIRED_FIELDS" => array(
+                                    1 => "USER_PHONE",
+                                ),
+                                "USE_CAPTCHA" => "N",
+                                "COMPONENT_TEMPLATE" => "main_form",
+                                "REDIRECT_URL" => "",
+                                "AJAX_MODE" => "Y",
+                                "AJAX_OPTION_SHADOW" => "N",
+                                "AJAX_OPTION_JUMP" => "N",
+                                "AJAX_OPTION_STYLE" => "Y",
+                                "AJAX_OPTION_HISTORY" => "N",
+                            ),
+                            false
+                        ); ?>
                     </div>
                 </div>
             </div>

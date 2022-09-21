@@ -2,6 +2,8 @@
 $MESS['BTN_CLOSE_LABEL'] = 'Закрыть';
 $MESS['CALLBACK_MODAL_TITLE'] = 'Заказать обратный звонок';
 $MESS['ORDER_MODAL_TITLE'] = 'Заказать спецтехнику';
+$MESS['MODAL_FORM_CTA'] = 'Заполните форму обратной связи и мы Вам перезвоним.';
+$MESS['MODAL_FORM_OK_TEXT'] = 'Спасибо. Мы перезвоним Вам в течение дня!';
 
 $MESS['FOOTER_MAIN_PHONE_TITLE'] = 'Позвонить';
 $MESS['FOOTER_CALLBACK_BTN_TEXT'] = 'Заказать звонок';

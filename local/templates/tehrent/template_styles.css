@@ -121,6 +121,20 @@ h5,
   --bs-table-border-color: var(--border-color);
   margin-bottom: 20px; }
 
+.modal {
+  --bs-modal-border-radius: 0px;
+  --bs-modal-header-border-color: var(--border-color); }
+  .modal-title {
+    font-weight: 700;
+    font-size: 1.25rem; }
+  .modal-cta {
+    margin-bottom: 30px; }
+
+.alert {
+  --bs-alert-border-radius: 0px;
+  --bs-alert-padding-x: 15px;
+  --bs-alert-padding-y: 15px; }
+
 .logo {
   display: flex; }
   .logo_header {
