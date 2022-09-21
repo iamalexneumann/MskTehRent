@@ -86,6 +86,6 @@ else:
     <input type="hidden" name="PRODUCT_NAME" value="<?= $GLOBALS["PRODUCT_NAME"]; ?>">
     <input type="hidden" name="PARAMS_HASH" value="<?= $arResult['PARAMS_HASH']; ?>">
     <input type="submit" name="submit" value="<?= Loc::getMessage('MODAL_FORM_SUBMIT_BTN_TEXT'); ?>" class="btn btn-warning main-form__btn"
-           onclick="ym('', 'reachGoal', 'form_submit'); return true;">
+           onclick="ym(90368519, 'reachGoal', 'form_submit'); return true;">
 </form>
 <?php endif; ?>

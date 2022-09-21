@@ -78,7 +78,7 @@ $APPLICATION->IncludeComponent(
 	$component
 ); ?>
 
-<div class="main-section pb-0 pt-0">
+<div class="main-section pb-0 pt-0 bg-none">
     <div class="main-section__header">
         <div class="main-section__wrapper">
             <div class="main-section__title h2"><?= Loc::getMessage('PRODUCTS_SECTION_TITLE'); ?></div>

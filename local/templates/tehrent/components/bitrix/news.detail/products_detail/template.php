@@ -39,8 +39,10 @@ use Bitrix\Main\Localization\Loc;
 
     <table class="table table-bordered product-detail__characteristics">
         <thead>
-            <th scope="col"><?= Loc::getMessage('PRODUCT_DETAIL_TABLE_TH_PARAM'); ?></th>
-            <th scope="col"><?= Loc::getMessage('PRODUCT_DETAIL_TABLE_TH_VALUE'); ?></th>
+            <tr>
+                <th scope="col"><?= Loc::getMessage('PRODUCT_DETAIL_TABLE_TH_PARAM'); ?></th>
+                <th scope="col"><?= Loc::getMessage('PRODUCT_DETAIL_TABLE_TH_VALUE'); ?></th>
+            </tr>
         </thead>
         <tbody>
             <?php
@@ -48,7 +50,7 @@ use Bitrix\Main\Localization\Loc;
                 if ($property_key !== 'ATT_PRICE' && $property_key !== 'ATT_DETAIL_TEXT'):
             ?>
             <tr>
-                <td><?= $property['NAME']; ?></td>
+                <th scope="row"><?= $property['NAME']; ?></th>
                 <td><?= $property['VALUE']; ?></td>
             </tr>
             <?php
@@ -59,7 +61,9 @@ use Bitrix\Main\Localization\Loc;
 
     <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/product_detail_price_block.php'); ?>
 
-    <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/section_features.php'); ?>
+    <div class="main-section border-bottom-0">
+        <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/section_features.php'); ?>
+    </div>
 
     <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/product_detail_price_block.php'); ?>
 

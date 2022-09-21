@@ -40,7 +40,7 @@ $APPLICATION->SetTitle("Главная");
     ); ?>
 </section>
 
-<div class="index-features">
+<div class="main-section">
     <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/section_features.php'); ?>
 </div>
 
@@ -112,8 +112,10 @@ $APPLICATION->SetTitle("Главная");
 
 <section class="main-section">
     <header class="main-section__header">
-        <h2 class="main-section__title">Цены на аренду спецтехники</h2>
-        <div class="main-section__subtitle">Сделаем для Вас лучшее предложение по цене</div>
+        <div class="main-section__wrapper">
+            <h2 class="main-section__title">Цены на аренду спецтехники</h2>
+            <div class="main-section__subtitle">Сделаем для Вас лучшее предложение по цене</div>
+        </div>
     </header>
     <ul>
         <li>Стоимость указана при оплате по безналичному расчету с учетом НДС;</li>
