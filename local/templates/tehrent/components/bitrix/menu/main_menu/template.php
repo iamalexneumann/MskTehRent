@@ -32,12 +32,12 @@ foreach ($arResult as $arItem):
     if ($arItem['IS_PARENT']):
         if ($arItem['DEPTH_LEVEL'] === 1):
             $dropdown_label = \CUtil::translit(
-                    $arItem['TEXT'],
-                    'ru',
-                    [
-                        'replace_space'=>'',
-                        'replace_other'=>''
-                    ]
+                $arItem['TEXT'],
+                'ru',
+                [
+                    'replace_space'=>'',
+                    'replace_other'=>''
+                ]
             );
 ?>
     <li class="nav-item dropdown">

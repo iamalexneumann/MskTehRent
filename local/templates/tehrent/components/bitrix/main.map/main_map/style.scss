@@ -1,0 +1,36 @@
+.sitemap {
+  & ol {
+    list-style: none;
+    counter-reset: li;
+    margin: 0;
+  }
+
+  &__list {
+    padding-left: 0;
+  }
+
+  &__sub-list {
+    margin-top: 10px !important;
+    padding-left: 1rem;
+  }
+
+  &__item::before {
+    counter-increment: li;
+    content: counters(li, ".") ". ";
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+
+  }
+
+  &__description {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+}
+

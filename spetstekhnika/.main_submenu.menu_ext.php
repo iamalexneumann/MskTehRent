@@ -4,7 +4,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 global $APPLICATION;
 $aMenuLinksExt = $APPLICATION->IncludeComponent(
-    "bitrix:menu.sections",
+    "custom.bitrix:menu.sections",
     "",
     array(
         "IS_SEF" => "Y",
@@ -13,7 +13,7 @@ $aMenuLinksExt = $APPLICATION->IncludeComponent(
         "DETAIL_PAGE_URL" => "#SECTION_CODE#/#ELEMENT_CODE#/",
         "IBLOCK_TYPE" => "primary_content",
         "IBLOCK_ID" => "1",
-        "DEPTH_LEVEL" => "1",
+        "DEPTH_LEVEL" => "2",
         "CACHE_TYPE" => "A",
         "CACHE_TIME" => "36000000"
     ),
