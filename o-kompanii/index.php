@@ -12,8 +12,11 @@ $APPLICATION->SetTitle("О компании");
 </ul>
 <p>Наш многолетний опыт работы позволяет оказывать услуги аренды автовышек на высоком уровне. Убедитесь в этом сами и оцените наши многочисленные преимущества. Заказать в аренду автовышку можно по контактам, указанным на странице "<a href="/kontakty/">Контакты</a>". </p>
 <button type="button"
-        class="btn btn-warning"
+        class="btn btn-warning mt-3"
         data-bs-toggle="modal"
         data-bs-target="#orderModal"
         data-bs-source='Кнопка на странице "О компании"'>Заказать спецтехнику</button>
+<div class="main-section bg-none pb-0">
+    <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/section_features.php'); ?>
+</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -56,7 +56,7 @@ Loc::loadLanguageFile(__FILE__);
 <body>
     <?= $siteparam_scripts_body_before; ?>
     <?php $APPLICATION->ShowPanel(); ?>
-    <header class="main-header">
+    <header class="main-header sticky-top">
         <nav class="navbar navbar-expand-xl bg-white">
             <div class="container-fluid">
                 <a class="logo logo_header"
