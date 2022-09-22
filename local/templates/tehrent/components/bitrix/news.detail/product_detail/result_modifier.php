@@ -10,7 +10,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @global CDatabase $DB
  * @var CBitrixComponentTemplate $this
  */
-$GLOBALS["PRODUCT_NAME"] = $arResult['NAME'];
 $item_picture = $arResult['DETAIL_PICTURE'];
 if ($item_picture) {
     $arResultPictureFileTmp = \CFile::ResizeImageGet(
