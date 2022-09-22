@@ -1,0 +1,9 @@
+<?php
+$MESS['PRODUCT_DETAIL_PRICE_TEXT'] = 'Цена за смену';
+$MESS['PRODUCT_DETAIL_PRICE_CURRENCY'] = '&#8381;, с НДС';
+$MESS['PRODUCT_DETAIL_TABLE_TH_PARAM'] = 'Характеристика';
+$MESS['PRODUCT_DETAIL_TABLE_TH_VALUE'] = 'Значение';
+$MESS['PRODUCT_DETAIL_ORDER_BTN_TEXT'] = 'Заказать спецтехнику';
+$MESS['PRODUCT_DETAIL_IMG_ALT_PHOTO_NUMBER_TEXT'] = 'фото';
+$MESS['PRODUCT_DETAIL_CAROUSEL_PREV_BTN_TEXT'] = 'Предыдущее сообщение';
+$MESS['PRODUCT_DETAIL_CAROUSEL_NEXT_BTN_TEXT'] = 'Следующее сообщение';

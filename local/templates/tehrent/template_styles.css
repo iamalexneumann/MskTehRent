@@ -334,14 +334,13 @@ h5,
   .main-section:last-child {
     border-bottom: none; }
   .main-section__header {
+    position: relative;
     margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; }
-  .main-section__wrapper {
-    position: relative; }
-    .main-section__wrapper::before {
+    .main-section__header::before {
       content: '';
       position: absolute;
       bottom: -24px;

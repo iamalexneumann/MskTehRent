@@ -481,15 +481,12 @@ h5,
   }
 
   &__header {
+    position: relative;
     margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-  }
-
-  &__wrapper {
-    position: relative;
 
     &::before {
       content: '';
@@ -499,6 +496,10 @@ h5,
       width: 150px;
       background: var(--warning);
     }
+  }
+
+  &__wrapper {
+
   }
 
   &__title {

@@ -12,11 +12,11 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/local/admin/sprint.editor/my/my_table/script.min.js" />
-      <root url="file://$PROJECT_DIR$/local/templates/tehrent/components/bitrix/news.detail/products_detail/script.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/tehrent/components/bitrix/news/products/script.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/tehrent/components/sprint.editor/blocks/.default/_script.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/tehrent/main.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/tehrent/components/bitrix/news.list/product_list/script.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/tehrent/components/bitrix/news.detail/product_detail/script.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

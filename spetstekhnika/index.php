@@ -48,7 +48,7 @@ $APPLICATION->IncludeComponent(
             12 => "ATT_BODY_LOAD_CAPACITY",
             13 => "ATT_DIMENSIONS_L_W",
             14 => "ATT_BOOM_LENGTH",
-            15 => "",
+            15 => "ATT_PHOTOS",
         ),
         "DETAIL_SET_CANONICAL_URL" => "Y",
         "DISPLAY_BOTTOM_PAGER" => "Y",

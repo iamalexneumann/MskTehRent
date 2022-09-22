@@ -38,9 +38,38 @@
   }
 
   .product-carousel {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    border: 1px solid var(--border-color);
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__control-prev,
+    &__control-next {
+      width: 10%;
+      font-size: 2rem;
+      color: var(--light);
+
+      @media (max-width: 767.98px) {
+        & {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__control-prev {
+      background: linear-gradient(90deg, rgba(28, 30, 34, 0.5), rgba(255, 255, 255, 0));
+    }
+
+    &__control-next {
+      background: linear-gradient(-90deg, rgba(28, 30, 34, 0.5), rgba(255, 255, 255, 0));
+    }
+
+    img {
+      width: 100%;
+    }
   }
   
   @media (max-width: 991.98px) {
