@@ -1,0 +1,15 @@
+.feedback-form {
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__form-control {
+    border-radius: 0 !important;
+    padding: 15px !important;
+  }
+}

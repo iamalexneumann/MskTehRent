@@ -21,7 +21,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 use Bitrix\Main\Localization\Loc;
 
 $six_digit_random_number = rand(100000, 999999);
-$CurDir = $APPLICATION->GetCurDir();
 ?>
 <?php
 if (!empty($arResult['ERROR_MESSAGE'])):

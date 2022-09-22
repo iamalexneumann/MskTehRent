@@ -33,7 +33,7 @@ $APPLICATION->IncludeComponent(
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "Y",
         "MESSAGE_404" => "",
-        "NEWS_COUNT" => "20",
+        "NEWS_COUNT" => "10",
         "PAGER_BASE_LINK_ENABLE" => "N",
         "PAGER_DESC_NUMBERING" => "N",
         "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -59,5 +59,28 @@ $APPLICATION->IncludeComponent(
         "STRICT_SECTION_CHECK" => "N"
     )
 ); ?>
+
+<div class="main-section bg-none pb-0">
+    <header class="main-section__header">
+        <div class="main-section__wrapper">
+            <h2 class="main-section__title">Оставьте отзыв</h2>
+            <div class="main-section__subtitle">Напишите отзыв о нашей спецтехнике и работе машинистов</div>
+        </div>
+    </header
+    <?php
+    $APPLICATION->IncludeComponent(
+        "bitrix:main.feedback",
+        "main_feedback",
+        Array(
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO",
+            "EMAIL_TO" => $siteparam_email,
+            "EVENT_MESSAGE_ID" => array("12"),
+            "OK_TEXT" => "Спасибо за отзыв! Он будет промодерирован и добавлен на сайт.",
+            "REQUIRED_FIELDS" => array("NAME", "MESSAGE"),
+            "USE_CAPTCHA" => "N"
+        )
+    ); ?>
+</div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
