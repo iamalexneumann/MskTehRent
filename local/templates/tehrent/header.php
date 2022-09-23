@@ -238,9 +238,9 @@ Loc::loadLanguageFile(__FILE__);
                             "SET_STATUS_404" => "N",
                             "SET_TITLE" => "N",
                             "SHOW_404" => "N",
-                            "SORT_BY1" => "SORT",
+                            "SORT_BY1" => "property_ATT_DATE",
                             "SORT_BY2" => "ACTIVE_FROM",
-                            "SORT_ORDER1" => "ASC",
+                            "SORT_ORDER1" => "DESC",
                             "SORT_ORDER2" => "DESC",
                             "STRICT_SECTION_CHECK" => "N"
                         )
