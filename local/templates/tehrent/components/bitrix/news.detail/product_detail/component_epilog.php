@@ -18,3 +18,4 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var CBitrixComponent $component
  */
 $GLOBALS['PRODUCT_NAME'] = $arResult['NAME'];
+$GLOBALS['PRODUCT_PRICE'] = $arResult['ATT_PRICE'];

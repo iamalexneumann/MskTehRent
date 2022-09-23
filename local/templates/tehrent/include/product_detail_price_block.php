@@ -10,7 +10,7 @@ use Bitrix\Main\Localization\Loc;
 <div class="product-detail__price-wrapper">
     <div class="product-detail__price">
         <span class="product-detail__price-title"><?= Loc::getMessage('PRODUCT_DETAIL_PRICE_TEXT'); ?>:</span>
-        <?= number_format($arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('PRODUCT_DETAIL_PRICE_CURRENCY'); ?>
+        <?= number_format($GLOBALS['PRODUCT_PRICE'] ?? $arResult['ATT_PRICE'], 0, '', ' ') . ' ' . Loc::getMessage('PRODUCT_DETAIL_PRICE_CURRENCY'); ?>
     </div>
     <button type="button"
             class="btn btn-dark"

@@ -77,6 +77,81 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 ); ?>
+<div class="main-section pt-0">
+    <div class="main-section__header">
+        <div class="main-section__wrapper">
+            <div class="main-section__title h2"><?= Loc::getMessage('PRODUCTS_REVIEWS_SECTION_TITLE'); ?></div>
+            <div class="main-section__subtitle"><?= Loc::getMessage('PRODUCTS_REVIEWS_SECTION_SUBTITLE'); ?></div>
+        </div>
+        <a href="/otzyvy/"
+           class="main-section__link">
+            <?= Loc::getMessage('PRODUCTS_REVIEWS_SECTION_BTN_TEXT'); ?>
+            <i class="main-section__icon fa-solid fa-angle-right"></i>
+        </a>
+    </div>
+    <?php
+    $APPLICATION->IncludeComponent(
+        "bitrix:news.list",
+        "reviews_list",
+        Array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "AJAX_MODE" => "N",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "Y",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "CHECK_DATES" => "Y",
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO",
+            "DETAIL_URL" => "",
+            "DISPLAY_BOTTOM_PAGER" => "N",
+            "DISPLAY_TOP_PAGER" => "N",
+            "FIELD_CODE" => array("", ""),
+            "FILTER_NAME" => "",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "IBLOCK_ID" => "2",
+            "IBLOCK_TYPE" => "primary_content",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "INCLUDE_SUBSECTIONS" => "Y",
+            "MESSAGE_404" => "",
+            "NEWS_COUNT" => "5",
+            "PAGER_BASE_LINK_ENABLE" => "N",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "N",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => "main_pagination",
+            "PAGER_TITLE" => "",
+            "PARENT_SECTION" => "",
+            "PARENT_SECTION_CODE" => "",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "PROPERTY_CODE" => array("ATT_DATE", ""),
+            "SET_BROWSER_TITLE" => "N",
+            "SET_LAST_MODIFIED" => "N",
+            "SET_META_DESCRIPTION" => "N",
+            "SET_META_KEYWORDS" => "N",
+            "SET_STATUS_404" => "N",
+            "SET_TITLE" => "N",
+            "SHOW_404" => "N",
+            "SORT_BY1" => "property_ATT_DATE",
+            "SORT_BY2" => "ACTIVE_FROM",
+            "SORT_ORDER1" => "DESC",
+            "SORT_ORDER2" => "DESC",
+            "STRICT_SECTION_CHECK" => "N"
+        ),
+        $component,
+        Array(
+            "HIDE_ICONS" => "Y"
+        )
+    ); ?>
+</div>
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/product_detail_price_block.php'); ?>
 
 <div class="main-section pb-0 pt-0 bg-none">
     <div class="main-section__header">

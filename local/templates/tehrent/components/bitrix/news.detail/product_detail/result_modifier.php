@@ -10,6 +10,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @global CDatabase $DB
  * @var CBitrixComponentTemplate $this
  */
+$component = $this->__component;
+
 $item_picture = $arResult['DETAIL_PICTURE'];
 if ($item_picture) {
     $arResultPictureFileTmp = \CFile::ResizeImageGet(
@@ -80,3 +82,10 @@ foreach ($att_photos['VALUE'] as $key => $att_photo) {
         $arResult['DISPLAY_PROPERTIES']['ATT_PHOTOS']['PICTURE_LQIP'][$key] = array_change_key_case($arItemPictureLqipFileTmp, CASE_UPPER);
     }
 }
+
+$component->arResult['ATT_PRICE'] = $arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'];
+$component->SetResultCacheKeys(
+    [
+        'ATT_PRICE',
+    ],
+);
