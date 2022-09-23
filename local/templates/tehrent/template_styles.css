@@ -142,6 +142,9 @@ h5,
   --bs-alert-padding-x: 15px;
   --bs-alert-padding-y: 15px; }
 
+.sticky-top {
+  z-index: 1000 !important; }
+
 .logo {
   display: flex; }
   .logo_header {
