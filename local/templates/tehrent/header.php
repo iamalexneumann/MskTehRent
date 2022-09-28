@@ -135,8 +135,8 @@ Loc::loadLanguageFile(__FILE__);
                                 </li>
                                 <?php endif; ?>
                             </ul>
-                            <?php endif; ?>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
