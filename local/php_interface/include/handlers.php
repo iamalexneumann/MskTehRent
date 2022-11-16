@@ -10,7 +10,11 @@ function removeAtts(&$content)
 }
 function replace_output($d)
 {
-    return str_replace([' type="text/javascript"', ' />'], ['', '>'], $d);
+    return str_replace(
+        [' type="text/javascript"', ' />'],
+        ['', '>'],
+        $d
+    );
 }
 
 function deleteKernelCss (&$content) {
