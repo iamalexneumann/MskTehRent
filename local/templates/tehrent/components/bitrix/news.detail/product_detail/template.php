@@ -40,7 +40,9 @@ $carousel_interval = 3000;
                 </a>
             </li>
 
-            <?php foreach ($att_photos['VALUE'] as $key => $att_photo): ?>
+            <?php
+            if ($att_photos):
+                foreach ($att_photos['VALUE'] as $key => $att_photo): ?>
             <li class="carousel-item product-carousel__item" data-bs-interval="<?= $carousel_interval; ?>">
                 <a href="<?= $att_photos['FILE_VALUE'][$key]['SRC'] ?: $att_photos['FILE_VALUE']['SRC']; ?>"
                    data-fancybox="gallery-product-detail"
@@ -54,7 +56,9 @@ $carousel_interval = 3000;
                          height="<?= $att_photos['PICTURE'][$key]['HEIGHT']; ?>">
                 </a>
             </li>
-            <?php endforeach; ?>
+            <?php
+                endforeach;
+            endif; ?>
         </ul>
 
         <?php if ($att_photos): ?>
